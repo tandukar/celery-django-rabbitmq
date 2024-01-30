@@ -1,6 +1,5 @@
 from django import forms
-# https://www.youtube.com/watch?v=7dUxyIp5mMI&t=52s
-
+from .tasks import send_review_email_task
 
 class ReviewForm(forms.Form):
     name = forms.CharField(label='Firstname', min_length=4, max_length=50, widget=forms.TextInput(

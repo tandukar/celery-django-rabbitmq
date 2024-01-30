@@ -25,8 +25,14 @@ SECRET_KEY = "django-insecure-wm#(ra9d1&%mpq=ef-q-%=6g%lo*h1q%vypwrn5_q)!moztd_&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
+CSRF_COOKIE_SECURE = False
+
+
+CSRF_TRUSTED_ORIGINS = {
+    'https://localhost:8000'
+}
 
 # Application definition
 
