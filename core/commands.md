@@ -13,3 +13,6 @@ sudo service rabbitmq-server start
 ```bash
 celery -A core worker -l info
 ```
+```bash
+celery -A core worker -l info --pool=solo
+```
