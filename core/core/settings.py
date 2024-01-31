@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     "task2",
     "app",
     "celery",
+    "task3",
+    "flower",
 ]
 
 MIDDLEWARE = [

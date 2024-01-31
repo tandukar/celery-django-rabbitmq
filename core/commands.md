@@ -16,3 +16,11 @@ celery -A core worker -l info
 ```bash
 celery -A core worker -l info --pool=solo
 ```
+### Flower
+```bash
+pip install flower
+```
+### start flower
+```bash
+flower -A core --port-5555
+```
