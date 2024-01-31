@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "celery",
     "task3",
     "flower",
+    "django_celery_beat",
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,12 @@ EMAIL_HOST_PASSWORD = 'jbhkvfvoneaccbcn'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'tandukarpragyo@gmail.com'
+
+CELERY_BEAT_SCHEDULE = {
+        "schedule-task": {
+            "task": "app.tasks.add",
+            "schedule": 5.0,
+            "args": (16, 16),
+        }
+
+}
